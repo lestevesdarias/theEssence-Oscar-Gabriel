@@ -1,0 +1,98 @@
+---
+import Articulo from "./Articulo.astro";
+const traerArticulos = await fetch('https://public-api.wordpress.com/wp/v2/sites/gabrielvarela2000g-mhgnj.wordpress.com/posts?categories=160980&per_page=100');
+const json = await traerArticulos.json();
+
+---
+
+<div class="flechaizquierda">
+    </div>
+<div class="flechaderecha">
+    </div>
+
+<swiper-container class="mySwiper" space-between="5"
+    slides-per-view="4" loop="true" 
+    navigation-prev-el=".flechaizquierda"
+    navigation-next-el=".flechaderecha">
+    {json.map((articulo:any) => (
+      <swiper-slide>
+          <Articulo titulo={articulo?.title?.rendered}
+          enlace={articulo?.slug} set:html={articulo?.title?.rendered}	
+          imagen={articulo?.jetpack_featured_media_url}	/>
+      </swiper-slide>
+
+    ))}
+</swiper-container> 
+   
+    
+
+    
+
+    
+
+  <style>
+
+    swiper-container {
+      width: 95%;
+      height: 460px;
+      padding-top: 15px;
+      padding-bottom: 0%;
+      margin-inline: 20px 15px;
+    }
+
+    swiper-slide {
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      padding-top: 0; 
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 200%;
+      object-fit: contain;
+      padding-bottom: 0%;
+      margin-bottom: 0%;
+    }
+
+
+    .flechaizquierda,
+.flechaderecha {
+    width: 45px; 
+    height: 45px;
+    position: absolute; 
+    top: 100px;
+    z-index: 0;
+    transition: transform 0.3s ease-out; 
+    cursor: pointer;
+  
+}
+
+.flechaizquierda:hover {
+		transform: translateX(-10px); 
+	}
+
+.flechaizquierda {
+   left: 0;
+    background-image: url("/flechaizq.svg"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flechaderecha:hover {
+		transform: translateX(10px); 
+	}
+
+.flechaderecha { 
+  right: 0;
+    background-image: url("/flechader.svg"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+    
+  </style>

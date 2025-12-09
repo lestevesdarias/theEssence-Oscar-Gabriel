@@ -1,0 +1,42 @@
+---
+
+import ArticleGroup from "../components/ArticleGroup.astro";
+import Articulo from "../components/Articulo.astro";
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro";
+
+LayoutNoBarra
+Articulo
+const articles = [
+  {
+    title: 'Las mascotas ',
+    image: '/yuru.png',
+    description: 'Un artículo sobre la importancia de las botargas gigantes en la promoción de lugares emblematicos ...',
+    author: 'EL Anonimo',
+    date: 'NOV 2025' 
+  },
+  {
+    title: 'Arte tradicional en el desarrollo de festivales',
+    image: '/festival.jpg',
+    description: 'Exploramos las tecnicas milenarias de pintura que se utiliza para adornar las calles en las epocas festivas...',
+    author: 'Pedro Perez',
+    date: 'NOV 2025' 
+  },
+  {
+    title: 'Imperdibles para los amantes de la aventura',
+    image: '/solo.jpg',
+    description: 'Te presentamos una lista de lugares que no puedes perderte si la vena aventurera aflora en tu interior...',
+    author: 'Robert Robertson',
+    date: 'NOV 2025' 
+  }
+];
+
+---
+
+<LayoutNoBarra>
+    <h1>Artículos sobre Cultura</h1>
+    <ArticleGroup articles={articles} />
+</Layout>
+
+
+
+

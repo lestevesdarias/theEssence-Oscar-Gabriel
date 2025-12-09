@@ -1,0 +1,93 @@
+---
+
+const {imagen, titulo, enlace} = Astro.props;
+
+---
+
+        <article>
+			<div class="portada">
+				<a href={enlace}>
+					<img src={imagen} alt="">
+				</a>
+			</div>
+			<h2>
+                <a href={enlace} set:html={titulo}></a>
+            </h2>
+			
+		</article>
+
+        <style>
+            .portada {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1/1;
+                
+                margin-bottom: 0%;
+            }
+            
+            img {
+                max-width: 100%;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                padding-bottom: 0%;
+                margin-bottom: 0%;
+                display: block;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                object-fit: cover;
+                
+            }
+
+            img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+            }
+
+            a {
+                text-decoration: none; 
+                color: #000000 ; 
+                display: block;
+                transition: color 0.3s ease-in-out;
+                
+              }
+
+
+            article {
+                border-radius: 20px;
+                padding: 5px 10px 10px 10px;
+                display: block; 
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .full-link-container {
+                text-decoration: none; 
+                color: #CC0000; 
+                display: block;
+                transition: color 0.3s ease-in-out;
+            }
+
+
+            article:hover .full-link-container {
+                color: #CC0000; 
+            }
+
+            article:hover img {
+                transform: scale(1.1);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+            }
+
+            h2 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14px;
+                font-weight: bolder;
+                color: black;
+                padding-right: 7px;
+                margin-top: 28px;
+            }
+
+            img {
+                object-fit: cover;
+                height: 180px;
+                padding-bottom: 0%;
+                margin-bottom: 0%;
+            }
+        </style>

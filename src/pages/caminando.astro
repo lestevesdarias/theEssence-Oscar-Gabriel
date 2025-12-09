@@ -1,0 +1,326 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+<LayoutNoBarra>
+	<Techo/>
+<div class="fotos">
+	<swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+
+        <div class="portada">
+            <img src="../tren2.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+          
+
+        <div class="portada">
+            <img src="../bici2.jpeg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../tax1.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	<swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../caminata.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	
+    
+  </swiper-container>
+  </div>
+
+
+    <div class="contenerarticulo">
+        <section id="introduccion">
+            <h1>Cómo Moverse: Explorando Japón</h1>
+            <p>
+                Moverse por Japón es una experiencia en sí misma gracias a su infraestructura de transporte de primer nivel. Desde la eficiencia supersónica hasta la tranquilidad de una bicicleta, tienes opciones para cada tipo de viaje.
+        </section>
+
+        <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                
+               <ul> <li>
+                    Caminando en Japón: En las ciudades, caminar es la mejor manera de descubrir los callejones, templos escondidos y pequeños restaurantes. Las calles son seguras y las aceras suelen estar bien cuidadas. Sin embargo, prepárate para usar las escaleras de las estaciones, ¡la vida en Japón es activa!
+                <li>
+                    Shinkansen (Tren Bala): La columna vertebral del transporte de larga distancia. El Shinkansen es famoso por su velocidad, puntualidad y comodidad. Conecta las principales islas y ciudades de forma increíblemente rápida. Es la opción ideal para saltar entre Tokio, Kioto, Osaka y otras regiones distantes.
+                </li>
+                <li>Taxis: Son limpios, seguros y, aunque son más caros que el transporte público, son perfectos para viajes nocturnos, cuando el metro está cerrado, o cuando llevas mucho equipaje. Los taxistas son profesionales, aunque la comunicación en inglés puede ser limitada.
+
+                </li>
+                <li>Bicicletas: Alquilar una bicicleta es una manera maravillosa de explorar ciudades más pequeñas (como Kioto o Nara) o de adentrarse en la vida local de los barrios residenciales. Es una forma ecológica y relajante de moverse a tu propio ritmo.
+                    
+                </li>
+                </ul>
+            </div>
+            
+            <div class="seccionimagen">
+                <img src="../tren1.jpg" alt="" />
+            </div>
+        </section>
+
+       
+        <section class="seccioncentrado">
+            
+       
+      
+        
+   
+
+    
+</LayoutNoBarra>
+
+   <PieArticulo />
+<style>
+
+    .contenerarticulo {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 1%; 
+        box-sizing: border-box;
+        padding-top: 5%;
+    }
+
+    #articulogrid {
+        display: grid;
+        grid-template-columns: 1fr repeat(5, minmax(100px, 140px)) 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000000;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+       
+    }
+     h3 {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #bd1010;
+        margin-top: 30px;
+       
+    }
+    
+
+    p {
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 0;
+        margin-bottom: 1.5em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        padding-left: 15px;
+    }
+
+
+    li::before {
+        content: '•';
+        color: #CC0000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+#fotos{
+	padding-top: 50%;
+	grid-column: 1/8;
+}
+
+swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(12,1fr);
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+	.mySwiper swiper-slide {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mySwiper swiper-slide-active {
+        opacity: 1;
+    }
+
+
+	.portada {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    #introduccion {
+        grid-column: 2 / 7;
+        grid-area: intro;
+        border-bottom: 2px solid #CC0000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen {
+        grid-column: 2 / 7;
+        grid-area: seccion1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen .seccioncontenido {
+        grid-column: 1;
+    }
+
+    .secciontextoimagen .seccionimagen {
+        grid-column: 2;
+        padding-top: 50px;
+    }
+
+    .secciontextoimagen img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .seccioncentrado {
+        grid-column: 2 / 7;
+        grid-area: seccion2;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .seccioncentrado h2 {
+        text-align: left;
+        color: #CC0000;
+    }
+    
+    .centrado {
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagencentrada {
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    .imagencentrada img {
+        width: 100%;
+        height: auto;
+    }
+
+ 
+    .secciondoblecolumna {
+        grid-column: 2 / 7;
+        grid-area: doble;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciondoblecolumna .columna-izquierda {
+        grid-column: 1;
+    }
+
+    .secciondoblecolumna .columna-derecha {
+        grid-column: 2;
+    }
+
+    .secciondoblecolumna img {
+        width: 150%;
+        height: auto;
+        display: flex;
+        margin-top: 50px;
+    }
+
+
+    .seccioninferior {
+        grid-column: 2 / 7;
+        grid-area: final;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .seccioninferior .columnaizquierda,
+    .seccioninferior .columnaderecha {
+        grid-row: 1;
+    }
+
+    .imagenflotanteizquierda {
+        float: left;
+        width: 150px;
+        height: auto;
+        margin: 0 15px 15px 0;
+    }
+    
+    #resumenfinal {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1em;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+
+
+</style>
+    

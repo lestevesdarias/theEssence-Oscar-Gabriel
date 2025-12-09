@@ -1,0 +1,130 @@
+---
+import Pie from "../components/Pie.astro";
+import PieArticulo from "../components/PieArticulo.astro";
+import RoomGroup from "../components/RoomGroup.astro";
+import Techo from "../components/Techo.astro";
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro";
+PieArticulo
+
+RoomGroup
+Techo
+Pie
+
+const rooms = [
+  {
+    titulo: 'Cuarto Básico',
+    imagen: '/cuarto 1.jpg',
+    precio: '$150',
+   alificación: 4.9,
+    cama: 1,
+    baño: 1,
+    tamaño: 300,
+    tipo: 'Cuarto de Lujo'
+  },
+  {
+    titulo: 'Cuarto de Lujo',
+    imagen: '/cuarto 2.jpg',
+    precio: '$250',
+    calificación: 5.0,
+    camas: 1,
+    baños: 2,
+    tamaño: 400,
+    tipoe: 'Cuarto de Lujo'
+  },
+  {
+    titulo: 'Golden Horizon Suite',
+    imagen: '/cuarto 3.jpg',
+    precio: '$530',
+    calificación: 4.9,
+    cama: 3,
+    baño: 3,
+    tamaño: 800,
+    tipo: 'Cuarto de Lujo'
+  },
+ {
+    titulo: 'Golden Horizon Suite',
+    imagen: '/cuarto 4.jpg',
+    precio: '$400',
+    calificación: 4.5,
+    cama: 2,
+    baño: 2,
+    tamaño: 350,
+    tipo: 'Cuarto de Lujo'
+  },
+  {
+    titulo: 'Golden Horizon Suite',
+    imagen: '/cuarto 5.jpg',
+    precio: '$90',
+    calificación: 3.5,
+    cama: 1,
+    baño: 1,
+    tamaño: 25,
+    tipo: 'Cuarto economico'
+  },
+   {
+    titulo: 'Golden Horizon Suite',
+    imagen: '/cuarto 6.jpg',
+    precio: '$625',
+    calificación: 5.0,
+    cama: 3,
+    baño: 3,
+    tamaño: 1200,
+    tipo: 'Cuarto de Lujo'
+  },
+];
+
+---
+ 
+
+
+<LayoutNoBarra>
+  <Techo></Techo>
+  
+  <div class="contenerarticulo">
+  <div id="articulogrid">
+     <div id="intro"><title>Cuartos & Suites</title>
+
+    <h1>Cuartos de Lujo & Suites</h1>
+    <p>tu proximo destino podria estar muy creca de ti</p>
+  </div>
+  </div>
+
+
+    <RoomGroup rooms={rooms} />
+
+</div>
+  </Layout>
+   <PieArticulo />
+<style>
+   .contenerarticulo {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 1%; 
+        box-sizing: border-box;
+        padding-top: 5%;
+    }
+
+      #articulogrid {
+        display: grid;
+        grid-template-columns: 1fr repeat(1, minmax(100px,auto)) 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000000;
+        padding-top: 20px;
+    }
+  h1{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-column: 1,11;
+  }
+
+  p{font-family: Verdana, Geneva, Tahoma, sans-serif;
+      grid-column: 1,11;
+  }
+  #intro{
+        grid-column: 1 / 7;
+        grid-area: intro;
+        border-bottom: 2px solid #CC0000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+
+  }
+</style>

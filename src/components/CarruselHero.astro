@@ -1,0 +1,138 @@
+---
+
+
+const traerArticulos = await fetch('https://public-api.wordpress.com/wp/v2/sites/gabrielvarela2000g-mhgnj.wordpress.com/posts?categories=609441&per_page=100');
+const json = await traerArticulos.json();
+---
+
+<swiper-container class="mySwiper" pagination="true" loop="true" autoplay='{"delay": 4000}' effect="fade" 
+crossfade="true"> 
+   {json.map((articulo:any) => (
+       <swiper-slide>
+        <div class="info">
+          <h2 >
+            <a href={articulo?.slug} set:html={articulo?.title?.rendered}></a>
+          </h2>
+
+              <div class="sumario" set:html={articulo?.excerpt?.rendered}>
+                
+              </div>
+        </div>
+            
+
+            <div class="portada">
+                <img src={articulo?.jetpack_featured_media_url} alt=""/>
+            </div>
+        </swiper-slide>
+   ))}
+
+     <!--<swiper-slide>
+        <h2>CONOCE LAS MEJORES <br>
+          EXPERIENCIAS DE JAPÓN</h2>
+
+          <p>
+            Experiencias únicas y momentos memorables.
+          </p>
+
+        <div class="portada">
+            <img src="../bonito.jpg" alt="">
+        </div>
+    </swiper-slide>
+ <swiper-slide>
+          <h2>DESCUBRE OTOÑO EN JAPÓN</h2>
+
+          <p>
+            El ultimo y más bello suspiro del año.
+          </p>
+
+        <div class="portada">
+            <img src="../otoñonuevo.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+         <h2>LOS TESOROS DE <br>JAPÓN</h2>
+
+          <p>
+            Encuentra las gemas escondidas.
+          </p>
+
+        <div class="portada">
+            <img src="../tesoros.jpg" alt="">
+        </div>
+    </swiper-slide>
+     -->
+  </swiper-container>
+
+
+  <style>
+    swiper-container {
+      width: 100%;
+      height: 350px;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(12,1fr);
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info {
+        grid-column: 3/10;
+        grid-row: 2/12;
+         z-index: 1;
+    }
+
+    h2 {
+        
+        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        
+        font-weight: bold;
+        margin: 0;
+        z-index: 1;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+
+        a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+        }
+    }
+
+    h2:hover {
+                transform: scale(1.1);
+                
+            }
+
+   
+
+    .portada {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    .sumario {
+   
+     
+
+       p {
+      
+          padding-top: 15px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rgb(0, 0, 0);
+          font-weight: bolder;
+          font-size: 15px;
+          
+          margin: 0;
+        }
+    }
+  </style>

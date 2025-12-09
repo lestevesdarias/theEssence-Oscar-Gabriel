@@ -1,0 +1,476 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+
+<LayoutNoBarra>
+	<Techo/>
+<div class="fotos">
+	<swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+
+        <div class="portada">
+            <img src="../comida1.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+          
+
+        <div class="portada">
+            <img src="../comida2.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../comida3.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	<swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../comida4.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	<swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../comida5.jpg" alt="">
+        </div>
+    </swiper-slide>
+    
+  </swiper-container>
+  </div>
+
+
+    <div class="contenerarticulo">
+        <section id="introduccion">
+            <h1>El Alma de Japón en el Plato: Una Introducción a la Cocina Washoku</h1>
+            <p>
+                Si estás planeando un viaje a Japón o simplemente quieres explorar este fascinante mundo culinario, prepárate para ir más allá de los clichés y descubrir la profundidad de sus sabores.
+            </p>
+        </section>
+
+        <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                <h2>Los Tres Pilares de la Dieta Japonesa</h2>
+                <p>
+                    La gastronomía de Japón, conocida como Washoku, es mucho más que sushi y ramen. Es una filosofía culinaria que ha sido reconocida por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad. Esta cocina se distingue por su énfasis en la frescura, la estacionalidad, y una presentación artística que busca el equilibrio perfecto de colores, sabores y texturas.
+                </p>
+                <p>
+                    La comida japonesa se basa en el principio de armonía, y esto se refleja en los tres elementos fundamentales que encontrarás en casi cualquier mesa.
+                </p>
+                
+            </div>
+            
+            <div class="seccionimagen">
+                <img src="../plato.jpg" alt="" />
+            </div>
+
+            <div class="columnaizquierda">
+                <h3>1. Arroz (Gohan)</h3>
+                <p>
+                    El arroz es el corazón de la cocina japonesa, consumido en el desayuno, el almuerzo y la cena. Es el vehículo que acompaña y equilibra los sabores de los demás platos.
+                </p>
+                <ul>
+                    <li>
+                        Arroz Blanco Simple (Gohan): Servido sin sal ni mantequilla, es la base de cada comida.
+                    </li>
+                    <li>
+                        Donburi: Cuencos de arroz cubiertos con carne, huevo o vegetales (ejemplos populares: Gyūdon, Oyakodon).
+                    </li>
+                </ul>
+
+                 <h3>2. Sopa de Miso (Misoshiru)</h3>
+                <p>
+                    Esta sopa caliente se sirve tradicionalmente al lado del arroz. Es un caldo ligero hecho a base de dashi (un caldo básico de pescado y algas) mezclado con pasta de soja fermentada (miso).
+                </p>
+                <ul>
+                    <li>
+                        Variaciones: El sabor del miso varía enormemente según la región y el tiempo de fermentación, pudiendo ser blanco (más suave) o rojo (más intenso).
+                    </li>
+                    
+                </ul>
+
+                <h3>3. Pescado y Mariscos (Sakana)</h3>
+                <p>
+                    Rodeada por el océano, Japón tiene una cultura marítima inigualable. El pescado no solo se consume crudo, sino también a la parrilla (yakimono), hervido a fuego lento (nimono), o frito.
+                </p>
+              
+            </div>
+
+        </section>
+
+       
+        <section class="seccioncentrado">
+            
+            <div class="imagencentrada">
+                <img src="../fuego.jpg" alt="" />
+            </div>
+           
+
+            <h2>Más Allá del Sushi: Platos que Debes Probar</h2>
+        </section>
+
+
+        <section class="secciondoblecolumna">
+
+            <div class="columnaizquierda">
+                
+                <p>
+                    Aunque el sushi es el embajador mundial de la gastronomía nipona, hay muchos otros platos esenciales que definen la experiencia culinaria japonesa.
+                </p>
+
+                <h3>
+                    Ramen: El Plato de Fideos Confortable
+                </h3>
+                
+                <p>
+                    Proveniente de China, el ramen ha sido adoptado y perfeccionado hasta convertirse en un plato icónico japonés. Se trata de fideos de trigo servidos en un caldo rico y sabroso, que puede variar ampliamente:
+                </p>
+
+                <ul>
+                    <li>
+                        Shio (Sal): Caldo claro y salado, el más tradicional.
+                    </li>
+                    <li>
+                        Shōyu (Salsa de Soja): Caldo de color marrón, con un sabor umami profundo.
+                    </li>
+
+                    <li>
+                        Miso (Pasta de Soja): Caldo espeso y complejo, originario de Hokkaido.
+                    </li>
+                    <li>
+                        Tonkotsu: Caldo blanco y cremoso, hecho de huesos de cerdo hervidos por horas, típico de Kyushu.
+                    </li>
+                </ul>
+
+                <h3>
+                    Tempura: El Arte del Frito Ligero
+                </h3>
+
+                <p>
+                    La tempura son mariscos y vegetales ligeramente rebozados y fritos. La clave de la tempura perfecta es la ligereza de la masa, que debe ser crujiente y delicada. Se sirve con una salsa a base de dashi y rábano rallado.
+                </p>
+
+                <h3>
+                    Yakitori: Pinchos a la Parrilla
+                </h3>
+
+                <p>
+                    Estos son brochetas de pollo (y a veces otras carnes y vegetales) a la parrilla, sazonadas con sal (shio) o una salsa dulce y salada a base de soja (tare). Son un alimento básico de la comida callejera y de los izakaya (bares informales).
+                </p>
+            </div>
+
+
+        </section>
+        
+
+        <section class="seccioninferior">
+
+        <div class="columnaizquierda">
+
+            <h2>
+                Consejos de Etiqueta para el Viajero
+            </h2>
+                
+                <p>
+                    La comida en Japón es un rito, y conocer algunas reglas básicas te ayudará a mostrar respeto:
+                </p>
+                <ul>
+                    <li>
+                        "Itadakimasu" y "Gochisōsama deshita": Siempre di "Itadakimasu" (recibo humildemente) antes de comer y "Gochisōsama deshita" (fue un festín) después de terminar
+                    </li>
+                    <li>
+                        No Dejes Propina: La propina puede considerarse un insulto en Japón. El buen servicio ya está incluido.
+                    </li>
+
+                    <li>
+                        No Clavar los Palillos: Nunca claves los palillos verticalmente en el cuenco de arroz; es un rito funerario.
+                    </li>
+
+                    <li>
+                        Sorber los Fideos (Ramen): Sorber el ramen o los fideos no solo es aceptable, sino que es una señal de que estás disfrutando la comida y ayuda a enfriar los fideos calientes.
+                    </li>
+
+                    <li>
+                        Beber la Sopa: Las sopas (incluyendo el miso) se suelen beber directamente del cuenco, sin cuchara.
+                    </li>
+                </ul>
+            </div>
+
+           <div class="columnaizquierda">
+                <img src="../carne.jpg" alt="" class="imagenflotanteizquierda" />
+</section>
+
+<section class="seccioninferior">
+
+            <p id="resumenfinal">
+                La cocina japonesa es una invitación a la atención plena: apreciar los ingredientes, la presentación y el equilibrio de los sabores. Cada plato cuenta una historia de estacionalidad y tradición. ¡Atrévete a probarlo todo!
+            </p>
+        
+        </div>
+    </div>
+
+
+    <PieArticulo />
+
+</LayoutNoBarra>
+   
+<style>
+
+    .contenerarticulo {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 1%; 
+        box-sizing: border-box;
+        padding-top: 5%;
+    }
+
+    #articulogrid {
+        display: grid;
+        grid-template-columns: 1fr repeat(5, minmax(100px, 140px)) 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000000;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+       
+    }
+
+    h3 {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+    }
+
+    h4{
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 0;
+        margin-bottom: 1.5em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        padding-left: 15px;
+    }
+
+
+    li::before {
+        content: '•';
+        color: #CC0000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+#fotos{
+	padding-top: 50%;
+	grid-column: 1/8;
+}
+
+swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(12,1fr);
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+	.mySwiper swiper-slide {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mySwiper swiper-slide-active {
+        opacity: 1;
+    }
+
+
+	.portada {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    #introduccion {
+        grid-column: 2 / 7;
+        grid-area: intro;
+        border-bottom: 2px solid #CC0000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen {
+        grid-column: 2 / 7;
+        grid-area: seccion1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        
+    }
+
+    .secciontextoimagen .seccioncontenido {
+        grid-column: 1;
+    }
+
+    .secciontextoimagen .seccionimagen {
+        grid-column: 2;
+        
+    }
+
+    .secciontextoimagen img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .seccioncentrado {
+        grid-column: 2 / 7;
+        grid-area: seccion2;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .seccioncentrado h2 {
+        text-align: left;
+        color: #CC0000;
+    }
+    
+    .centrado {
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagencentrada {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .imagencentrada img {
+        width: 100%;
+        height: auto;
+    }
+
+ 
+    .secciondoblecolumna {
+        grid-column: 2 / 7;
+        grid-area: doble;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    .secciondoblecolumna .columna-izquierda {
+        grid-column: 1;
+    }
+
+    .secciondoblecolumna .columna-derecha {
+        grid-column: 2;
+    }
+
+    .secciondoblecolumna img {
+        width: 150%;
+        height: auto;
+        display: flex;
+        margin-top: 50px;
+    }
+
+
+    .seccioninferior {
+        grid-column: 2 / 7;
+        grid-area: final;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+
+    .seccioninferior .columnaizquierda,
+    .seccioninferior .columnaderecha {
+        grid-row: 1;
+    }
+
+    .imagenflotanteizquierda {
+        float: left;
+        width: 100%;
+        height: 100%;
+        
+        margin-bottom: 50px;
+    }
+    
+    #resumenfinal {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1em;
+        border-top: 1px solid #c41616;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+
+
+</style>
+    

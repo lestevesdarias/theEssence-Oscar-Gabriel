@@ -1,0 +1,298 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+
+<LayoutNoBarra>
+    <Techo/>
+
+<div class="fotos">
+    <swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../osa1.jpg" alt="Imagen 1 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../osa2.jpg" alt="Imagen 2 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../osa3.jpg" alt="Imagen 3 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../osa4.jpg" alt="Imagen 4 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../osa5.jpg" alt="Imagen 5 del carrusel">
+        </div>
+    </swiper-slide>
+    
+  </swiper-container>
+</div>
+<div class="contenedor-articulo">
+    
+    <div class="seccion-principal">
+
+        <h1 class="titulo-principal-seccion">
+            Osaka: El Universo Dōtonbori y la Capital Culinaria de Japón
+        </h1>
+
+        <p>
+            Osaka se distingue como la ciudad más grande de la región de Kansai y es conocida cariñosamente como la "Cocina de la Nación" (Tenka no Daidokoro). Esta urbe dinámica y con un espíritu notoriamente más abierto y jovial que su vecina Kioto, bulle con una energía inconfundible. Hogar del imponente Castillo de Osaka, la ciudad equilibra una rica historia comercial y militar con una modernidad vibrante, centrada en distritos de entretenimiento como Dōtonbori, famoso por sus neones gigantes y su filosofía culinaria de kuidaore (comer hasta la saciedad). Osaka es el destino ideal para experimentar la cultura japonesa con sabor, autenticidad y un sentido del humor contagioso.
+        </p>
+
+       
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        <h2 class="titulo-seccion-secundaria">
+            Kaiyukan: El Aquario de Osaka
+        </h2>
+        
+        <div class="bloque-contenido-imagen">
+            <div class="bloque-texto">
+                
+                <p>
+                    El Acuario de Osaka-Kaiyukan, inaugurado el 20 de julio de 1990, es un acuario urbano bajo techo, considerado como uno de los más grandes del mundo, con un volumen total de 11,000 toneladas de agua.
+                </p>
+                
+                <p>
+                    El Kaiyukan toma como base los temas de la zona volcánica del Pacífico, conocida como el Cinturón de Fuego, que engloba al océano Pacífico, y la zona de la vida del Pacífico, o el Cinturón de la Vida. Este concepto se fundamenta en la hipótesis de Gaia: "Todas las criaturas que existen en la Tierra, que posee actividad volcánica, son un solo ser que actúa de manera recíproca". Mediante 14 acuarios de gran tamaño se reproduce el medio ambiente natural de 10 regiones que circundan el océano Pacífico.
+                </p>
+
+                <p>
+                    El recorrido del Kaiyukan se inicia en "Aqua Gate", un acuario en forma de túnel rodeado de peces. Continúa por el "Bosque de Japón", a través del cual se filtran los rayos del sol, y pasa al acuario principal del "Océano Pacífico", con una capacidad de 5,400 toneladas de agua, donde se puede apreciar el tiburón ballena, el pez más grande del mundo. También se puede disfrutar de la "Sala de las medusas flotantes", donde se aprecian diversos tipos de medusas, la "Galería de Kaiyukan" y la "Sala de Exposiciones Programadas", donde se llevan a cabo diversas exposiciones especiales.
+                </p>
+           
+            </div>
+            
+            <div class="bloque-imagen">
+                <img src="../osaka1.jpg" alt="" /> 
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        
+        <h2 class="titulo-seccion-secundaria">
+            Universal Studios Japón
+        </h2>
+       
+        <p>
+            El parque Universal Studios Japan es similar al de Universal Orlando Resort, ya que contiene muchos de los mismos paseos. El área total es de 54 hectáreas. La mayoría de los visitantes son turistas japoneses o de otros países como la República Popular China y Corea del Sur.
+        </p>
+
+        <p>
+            El parque se inauguró el 31 de marzo de 2001. En 2005, Goldman Sachs se convirtió en el mayor accionista de Universal Studios Japan.
+        </p>
+        
+        <div class="bloque-imagen-full">
+            <img src="../osaka2.jpg" alt="" /> 
+        </div>
+    </div>
+
+    <div class="contenedor-caja-roja">
+        <div class="caja-info-roja">
+            
+            <h2 class="titulo-caja-roja">¿CÓMO LLEGAR?</h2>
+            
+            <p>
+                Desde Kioto, la manera más rápida de llegar es tomando un shinkansen Hikari hasta Shin-Osaka. Desde allí, se debe tomar un tren hasta la estación de Osaka y, finalmente, un tren de la línea Yumesaki que lleva directamente a la estación Universal City (la estación de Universal Studios Japan).
+            </p>
+        
+        </div>
+    </div>
+    
+    <div class="contenedor-pie-articulo">
+        
+        <p>
+            Osaka es la prueba de que el alma de Japón es vibrante y deliciosa: una ciudad que vive intensamente, invitando a cada visitante a sumergirse en su historia mercantil y disfrutar del contagioso lema del kuidaore.
+        </p>
+    
+    </div>
+
+</div>
+<PieArticulo />
+</LayoutNoBarra>
+
+
+<style>
+
+#fotos{
+    padding-top: 50%;
+    grid-column: 1/8;
+}
+
+swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+swiper-slide {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mySwiper swiper-slide-active {
+    opacity: 1;
+}
+
+
+.portada {
+    grid-column: 1/13;
+    grid-row: 1/13;
+}
+
+
+.contenedor-articulo {
+    font-family: Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.titulo-principal-seccion {
+    font-size: 40px;
+    color: #cc0000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.titulo-seccion-secundaria {
+    font-size: 30px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+
+.seccion-principal p, .bloque-texto p, .pie-seccion, .seccion-bloque-articulo p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+
+.bloque-contenido-imagen {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bloque-texto {
+    flex: 1;
+}
+
+.bloque-imagen {
+    flex-basis: 350px;
+    flex-shrink: 0;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pie-seccion {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c41616;
+}
+
+
+
+.bloque-imagen-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+.contenedor-caja-roja {
+    
+    margin-right: -111px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    border-style: dotted;
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+}
+
+.caja-info-roja {
+    color: white;
+}
+
+.titulo-caja-roja {
+    font-size: 35px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.caja-info-roja p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.contenedor-pie-articulo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contenedor-pie-articulo p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #000000;
+}
+
+</style>

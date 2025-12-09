@@ -1,0 +1,367 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+<LayoutNoBarra>
+	<Techo/>
+<div class="fotos">
+	<swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+
+        <div class="portada">
+            <img src="../info1.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+          
+
+        <div class="portada">
+            <img src="../info5.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../info6.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	<swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../info7.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+	
+    
+  </swiper-container>
+  </div>
+
+
+    <div class="contenerarticulo">
+        <section id="introduccion">
+            <h1>Guía Esencial para Primerizos en Japón</h1>
+            <p>
+                Japón es un destino fascinante y, aunque es increíblemente moderno y eficiente, dominar su logística es clave. Estos son los aspectos fundamentales que todo viajero debe conocer para asegurar un viaje sin contratiempos:
+
+       
+       <section id="introduccion">
+        </section>
+                <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                <h2>Conexión y Comunicación</h2>
+    
+                <ul>
+             
+                <li>
+                    WiFi y Conexiones: La conectividad es vital. El WiFi público es limitado; por ello, recomendamos enfáticamente alquilar un Pocket WiFi o adquirir una SIM de datos temporal. Esto garantiza navegación, uso de mapas y comunicación constante.
+                <li>
+                    Idioma: El inglés no es universal, especialmente fuera de las grandes ciudades. Tener una aplicación de traducción instalada te será de gran ayuda.
+                </li>
+                
+                </ul>
+            </div>
+            
+            <div class="seccionimagen">
+                <img src="../info4.jpg" alt="" />
+                 </section>
+            </div>
+        </section>
+         <div class="contenerarticulo">
+        <section id="introduccion">
+
+        <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                <h2>Clima y Geografía</h2>
+    
+                <ul>
+             
+                <li>
+                    Clima: Japón se extiende latitudinalmente, lo que significa que el clima varía enormemente. Prepara tu maleta según la estación: veranos calurosos y húmedos; inviernos fríos (con nieve en el norte) y hermosas primaveras y otoños templados, ideales para viajar.
+                <li>
+                    Geografía: El país es principalmente montañoso. Las grandes ciudades y la mayoría de los puntos de interés se encuentran a lo largo de las costas y están excelentemente conectados por la red ferroviaria.
+                </li>
+                
+                </ul>
+            </div>
+            
+            <div class="seccionimagen">
+                <img src="../info3.jpg" alt="" />
+            </div>
+        </section>
+         <div class="contenerarticulo">
+        <section id="introduccion">
+<section id="introduccion">
+        </section>
+        <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                <h2>Transporte Inteligente</h2>
+    
+                <ul>
+             
+                <li>
+                    Pases para Tren y Metro: La red de transporte es de clase mundial. Considera el Japan Rail Pass si planeas viajar largas distancias en tren bala (Shinkansen). Para las ciudades, utiliza pases de metro diarios o de varios días para ahorrar. </li>
+                <li>
+                    Tarjetas de Viaje: La Suica y la Pasmo son tarjetas recargables esenciales. Funcionan en prácticamente todos los trenes, metros, autobuses y tranvías de las principales ciudades de Japón, ¡y hasta en algunas máquinas expendedoras y tiendas de conveniencia! Son un must-have para la comodidad diaria.
+                </li>
+                
+                </ul>
+            </div>
+            
+            
+                <img src="../info2.jpg" alt="" />
+            </div>
+
+
+
+      
+
+
+    
+</LayoutNoBarra>
+   <PieArticulo />
+<style>
+
+    .contenerarticulo {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 1%; 
+        box-sizing: border-box;
+        padding-top: 5%;
+    }
+
+    #articulogrid {
+        display: grid;
+        grid-template-columns: 1fr repeat(5, minmax(100px, 140px)) 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000000;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+       
+    }
+     h3 {
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #bd1010;
+        margin-top: 30px;
+       
+    }
+    
+
+    p {
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 0;
+        margin-bottom: 1.5em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        padding-left: 15px;
+    }
+
+
+    li::before {
+        content: '•';
+        color: #CC0000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+#fotos{
+	padding-top: 50%;
+	grid-column: 1/8;
+}
+
+swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(12,1fr);
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+	.mySwiper swiper-slide {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mySwiper swiper-slide-active {
+        opacity: 1;
+    }
+
+
+	.portada {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    #introduccion {
+        grid-column: 2 / 7;
+        grid-area: intro;
+        border-bottom: 2px solid #CC0000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen {
+        grid-column: 2 / 7;
+        grid-area: seccion1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen .seccioncontenido {
+        grid-column: 1;
+    }
+
+    .secciontextoimagen .seccionimagen {
+        grid-column: 2;
+        padding-top: 50px;
+    }
+
+    .secciontextoimagen img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .seccioncentrado {
+        grid-column: 2 / 7;
+        grid-area: seccion2;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .seccioncentrado h2 {
+        text-align: left;
+        color: #CC0000;
+    }
+    
+    .centrado {
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagencentrada {
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    .imagencentrada img {
+        width: 100%;
+        height: auto;
+    }
+
+ 
+    .secciondoblecolumna {
+        grid-column: 2 / 7;
+        grid-area: doble;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciondoblecolumna .columna-izquierda {
+        grid-column: 1;
+    }
+
+    .secciondoblecolumna .columna-derecha {
+        grid-column: 2;
+    }
+
+    .secciondoblecolumna img {
+        width: 150%;
+        height: auto;
+        display: flex;
+        margin-top: 50px;
+    }
+
+
+    .seccioninferior {
+        grid-column: 2 / 7;
+        grid-area: final;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .seccioninferior .columnaizquierda,
+    .seccioninferior .columnaderecha {
+        grid-row: 1;
+    }
+
+    .imagenflotanteizquierda {
+        float: left;
+        width: 150px;
+        height: auto;
+        margin: 0 15px 15px 0;
+    }
+    
+    #resumenfinal {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1em;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+
+
+</style>
+    

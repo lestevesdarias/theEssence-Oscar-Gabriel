@@ -1,0 +1,88 @@
+---
+import Articulo from '../components/Articulo.astro';
+import CarruselHero from '../components/CarruselHero.astro';
+import CarruselMultiple from '../components/CarruselMultiple.astro';
+import LayoutAlternativo from '../layouts/LayoutAlternativo.astro';
+import Destinos from '../components/Destinos.astro';
+import Pie from '../components/Pie.astro';
+
+---
+
+
+<LayoutAlternativo>
+
+	<div class="espaciado" id="hero">
+		<CarruselHero/>
+	</div>
+	
+	<div id="contenido">
+
+		<div id="titulocarruselm">
+            <h2>TU GUÍA SELECCIONADA <br>PARA JAPÓN</h2>
+        </div>
+
+		<div id="contenedorcarruselm">
+			<CarruselMultiple/>
+		</div>
+			
+		<Destinos />
+
+		<Pie />
+		
+
+</LayoutAlternativo>
+
+<style>
+
+
+    #titulocarruselm {
+
+        grid-column: 1 / -1; 
+        width: 100%;
+        text-align: left;
+		padding-left: 135px;
+        margin-bottom: 15px;
+    }
+
+    #titulocarruselm h2 {
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: black;
+        margin: 0;
+
+    }
+
+	#contenedorcarruselm {
+
+        margin-top: 0;
+        margin-bottom: 20px;
+		position: relative;
+ }
+	
+
+	.grid {
+
+		display: grid;
+		grid-template-columns: repeat(10,1fr);
+		gap: 20px;
+	}
+	
+	.espaciado {
+
+		margin-bottom: 20px;
+	}
+
+	#hero {
+
+		grid-column: 1/4;
+	} 
+
+	#contenido {
+
+        grid-column: 2/4; 
+        display: flex; 
+        flex-direction: column;
+	}
+</style>

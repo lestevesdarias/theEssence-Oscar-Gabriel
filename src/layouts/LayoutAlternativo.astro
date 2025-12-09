@@ -1,0 +1,499 @@
+---
+import CabezalVertical from '../components/CabezalVertical.astro'; 
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>TheEssence-Inicio</title>
+	</head>
+	<body>
+		
+		
+		<div id="estructura-principal">
+        
+        <CabezalVertical /> 
+            
+			<div id="contenedor">
+				<slot/>
+			</div>
+
+
+			<div id="barraroja"></div>
+
+			
+            <div id="columna-lateral">
+                
+                <div id="logop">
+                    <img src="Logo.svg" alt="">
+                </div>
+
+				<div id="tituloinfo">
+                    <div id="grande">INFORMACIÓN</div>
+                    <div id="pequeno">IMPORTANTE PARA TU<br>VIAJE:</div>
+                </div>
+
+                <div class="visa">
+                    <div id="icon"> <img src="pasapo.svg" alt=""> </div>
+
+                    <div id="nombreinfo"> 
+                        <div id="nombre"> <a href="InfoVisa"><p>INFORMACIÓN<br>DE LA VISA</p></a></div>
+                        <div id="info"> <p>Embajadas<br>El Viaje a Japón</p> </div>
+                    </div>
+                </div>
+
+				<div class="tours">
+                    <div id="icon2"> <img src="tours.svg" alt=""> </div>
+
+                    <div id="nombreinfo2"> 
+                        <div id="nombre2"> <a href="tours"><p>TOURS Y ACTIVIDADES</p></a> </div>
+                        <div id="info2"> <p>Actividades Disponibles<br>Tours Especiales</p> </div>
+                    </div>
+                </div>
+
+				<div class="cama">
+                    <div id="icon3"> <img src="cama.svg" alt=""> </div>
+
+                    <div id="nombreinfo3"> 
+                        <div id="nombre3"> <a href="RoomPage"><p>DONDE QUEDARSE</p> </a></div>
+                        <div id="info3"> <p>Hoteles<br>Ryokan<br>Hoteles Baratos<br>Hoteles de Lujos</p> </div>
+                    </div>
+                </div>
+
+				<div class="primerizo">
+                    <div id="icon4"> <img src="primerizo.svg" alt=""> </div>
+
+                    <div id="nombreinfo4"> 
+                        <div id="nombre4"> <a href="Principiantes"><p>PARA PRIMERIZOS</p> </a></div>
+                        <div id="info4"> <p>WiFi y Conexiones<br>Clima<br>Geografía<br>Pases para Tren<br>y Metro<br>Tarjetas de Viaje</p> </div>
+                    </div>
+                </div>
+
+				<div class="aeropuerto">
+                    <div id="icon5"> <img src="aeropuerto.svg" alt=""> </div>
+
+                    <div id="nombreinfo5"> 
+                        <div id="nombre5"> <a href="aeropuerto"><p>ACCESO AL AEROPUERTO</p> </a></div>
+                        <div id="info5"> <p>Aeropuerto Haneda<br>Aeropuerto Narita<br>Osaka (KIX)<br>Aeropuerto Fukuoka</p> </div>
+                    </div>
+                </div>
+
+				<div class="caminando">
+                    <div id="icon6"> <img src="caminando.svg" alt=""> </div>
+
+                    <div id="nombreinfo6"> 
+                        <div id="nombre6"> <a href="caminando"><p>CAMINANDO<br>EN JAPÓN</p> </a></div>
+                        <div id="info6"> <p>Shinkansen<br>(Tren Bala)<br>Taxis<br>Bicicletas<br>Maletas<br>y Almacenamiento</p> </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            
+        </div>
+
+
+
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background: white;
+	}
+
+	
+	#estructura-principal {
+		display: grid;
+		grid-template-columns: 140px 265px 265px 265px 265px 1fr;
+		grid-template-rows: auto;
+		position: relative;
+		
+	}
+
+	#cabezal-vertical {
+    grid-column: 1;
+    }
+
+	#contenedor {
+		grid-row: 1/-1;
+		grid-column: 2/5;
+	}
+
+	#logop {
+		padding-top: 100px;
+		padding-left: 13px;
+        width: 90%;
+        margin-bottom: 25px;
+    }
+    
+    #logop img {
+        width: 100%;
+        height: auto;
+    }
+
+	 #tituloinfo {
+        padding-left: 11px; 
+        margin-top: 33px; 
+        margin-bottom: 55px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #tituloinfo div {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 900; 
+        color: black;
+        margin: 0;
+    }
+
+    #grande {
+        font-size: 29px; 
+    }
+
+    #pequeno {
+        font-size: 19px; 
+    }
+
+
+    .visa {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 2px; 
+    }
+
+    #icon {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info {
+		margin-top: -20%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	.tours {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 4px; 
+		padding-top: 50px;
+    }
+
+    #icon2 {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon2 img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre2 {
+		margin-top: -10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info2 {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	.cama {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 4px; 
+		padding-top: 50px;
+    }
+
+    #icon3 {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon3 img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo3 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre3 {
+		margin-top: -10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info3 {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	.primerizo {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 4px; 
+		padding-top: 50px;
+    }
+
+    #icon4 {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon4 img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo4 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre4 {
+		margin-top: -10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info4 {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	.aeropuerto {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 4px; 
+		padding-top: 50px;
+    }
+
+    #icon5 {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon5 img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo5 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre5 {
+		margin-top: -10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info5 {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	.caminando {
+        width: 100%;
+        max-width: 250px; 
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start; 
+        gap: 4px; 
+		padding-top: 50px;
+    }
+
+    #icon6 {
+        width: 70px; 
+        height: 70px; 
+        flex-shrink: 0;
+    }
+    
+    #icon6 img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+    }
+    
+    
+    #nombreinfo6 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-decoration: none;
+    }
+
+    #nombre6 {
+		margin-top: -10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 17px;
+        color: black;
+    }
+
+    #info6 {
+		margin-top: -15%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 13px;
+        color: black;
+    }
+
+
+	#barraroja {
+        grid-column: 6 / -1; 
+        grid-row: 1 / -1; 
+        background-color: #CC0000;
+        background-image: 
+            url('/nubes.svg'),
+            url('/cerezos.svg');
+        background-position: center top, center bottom;
+        background-size: 100%, 600%; 
+        background-repeat: no-repeat;
+}
+
+    a       {
+
+     text-decoration: none;
+     color: black;
+     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+     transition: color 0.3s ease-in-out;
+    transform: scale(1.1);
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
+    
+}
+
+#nombre:hover {
+                transform: scale(1.1);
+                
+            }
+
+            #nombre2:hover {
+                transform: scale(1.1);
+                
+            }
+
+            #nombre3:hover {
+                transform: scale(1.1);
+                
+            }
+
+            #nombre4:hover {
+                transform: scale(1.1);
+                
+            }
+
+            #nombre5:hover {
+                transform: scale(1.1);
+                
+            }
+
+#nombre6:hover {
+                transform: scale(1.1);
+                
+            }
+</style>

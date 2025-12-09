@@ -1,0 +1,345 @@
+---
+import PieArticulo from "../components/PieArticulo.astro"
+import Techo from "../components/Techo.astro"
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+
+LayoutNoBarra
+Techo
+PieArticulo
+---
+
+<LayoutNoBarra>
+	<Techo/>
+<div class="fotos">
+	<swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+
+        <div class="portada">
+            <img src="../bandera2.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+          
+
+        <div class="portada">
+            <img src="../pasaporte-japones.jpg" alt="">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+         
+
+        <div class="portada">
+            <img src="../japonVisa.jpeg" alt="">
+        </div>
+    </swiper-slide>
+
+    
+  </swiper-container>
+  </div>
+
+
+    <div class="contenerarticulo">
+        <section id="introduccion">
+            <h1>Visado y Contacto de Embajadas</h1>
+            <p>
+                Para disfrutar plenamente de tu aventura en Japón, es crucial que te informes y prepares con antelación respecto a los requisitos de entrada. La política de visados puede variar según tu nacionalidad y la duración de tu estancia.
+            </p>
+        </section>
+
+        <section class="secciontextoimagen">
+            <div class="seccioncontenido">
+                <h2>Requisitos de Visado</h2>
+                <p>
+                    Estancias Cortas (Turismo, Tránsito): Muchos países (incluyendo la mayoría de países de Latinoamérica, España, y otros) gozan de un acuerdo de exención de visado para estancias turísticas que no superen los 90 días. Esto significa que solo necesitarás tu pasaporte vigente.
+                </p>
+                <p>
+                    Estancias Largas o Propósitos Específicos: Si tu viaje es por más de 90 días, o tiene fines distintos al turismo (trabajo, estudios, intercambio cultural), sí necesitarás obtener una visa antes de viajar. Los tipos de visado más comunes son:
+                </p>
+                <p>
+                    <ul>
+                <li>Visa de Estudiante.</li>
+
+                        <li>Visa de Trabajo.</li>
+
+
+                    <li>Visa de Cónyuge/Dependiente.</li>
+                    </ul>
+                <p>
+                    ⚠️ Consejo Vital: Consulta siempre la página web oficial de la Embajada o Consulado de Japón en tu país de origen. Ellos tienen la información más actualizada y precisa sobre los requisitos de ingreso.
+                </p>
+            </div>
+            
+            <div class="seccionimagen">
+                <img src="../pasaporte.jpg" alt="" />
+            </div>
+        </section>
+
+       
+        <section class="seccioncentrado">
+           
+
+            <h2>Embajadas y Consulados: Tu Punto de Contacto</h2>
+        </section>
+
+
+        <section class="secciondoblecolumna">
+
+            <div class="columnaizquierda">
+                
+                <p>
+                    Las Embajadas y Consulados de Japón son recursos fundamentales antes y durante tu viaje.
+                </p>
+                <ul>
+                    <li>
+                        Antes de Viajar: Son la autoridad a la que debes dirigirte para solicitar visas (si son necesarias) o para resolver cualquier duda compleja sobre documentación.
+                    </li>
+                    <li>
+                        Durante tu Estancia: En caso de emergencia (pérdida de pasaporte, problemas legales o médicos serios, desastres naturales), debes contactar a la Embajada o Consulado de tu propio país ubicado en Japón. Ellos podrán asistirte como ciudadano.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="columnaderecha">
+                <img src="../embajador.jpg" alt="" />
+            </div>
+       
+    </div>
+
+
+    <PieArticulo />
+
+</LayoutNoBarra>
+   
+<style>
+
+    .contenerarticulo {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 1%; 
+        box-sizing: border-box;
+        padding-top: 5%;
+    }
+
+    #articulogrid {
+        display: grid;
+        grid-template-columns: 1fr repeat(5, minmax(100px, 140px)) 1fr;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000000;
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: #CC0000;
+        margin-top: 30px;
+       
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 0;
+        margin-bottom: 1.5em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        padding-left: 15px;
+    }
+
+
+    li::before {
+        content: '•';
+        color: #CC0000;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+#fotos{
+	padding-top: 50%;
+	grid-column: 1/8;
+}
+
+swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    swiper-slide {
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(12,1fr);
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+	.mySwiper swiper-slide {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mySwiper swiper-slide-active {
+        opacity: 1;
+    }
+
+
+	.portada {
+        grid-column: 1/13;
+        grid-row: 1/13;
+    }
+
+    #introduccion {
+        grid-column: 2 / 7;
+        grid-area: intro;
+        border-bottom: 2px solid #CC0000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen {
+        grid-column: 2 / 7;
+        grid-area: seccion1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciontextoimagen .seccioncontenido {
+        grid-column: 1;
+    }
+
+    .secciontextoimagen .seccionimagen {
+        grid-column: 2;
+        padding-top: 50px;
+    }
+
+    .secciontextoimagen img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .seccioncentrado {
+        grid-column: 2 / 7;
+        grid-area: seccion2;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .seccioncentrado h2 {
+        text-align: left;
+        color: #CC0000;
+    }
+    
+    .centrado {
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagencentrada {
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    .imagencentrada img {
+        width: 100%;
+        height: auto;
+    }
+
+ 
+    .secciondoblecolumna {
+        grid-column: 2 / 7;
+        grid-area: doble;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .secciondoblecolumna .columna-izquierda {
+        grid-column: 1;
+    }
+
+    .secciondoblecolumna .columna-derecha {
+        grid-column: 2;
+    }
+
+    .secciondoblecolumna img {
+        width: 150%;
+        height: auto;
+        display: flex;
+        margin-top: 50px;
+    }
+
+
+    .seccioninferior {
+        grid-column: 2 / 7;
+        grid-area: final;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .seccioninferior .columnaizquierda,
+    .seccioninferior .columnaderecha {
+        grid-row: 1;
+        
+    }
+
+    .imagenflotanteizquierda {
+        float: left;
+        width: 150px;
+        height: auto;
+        margin: 0 15px 15px 0;
+    }
+    
+    #resumenfinal {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1em;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+        margin-top: 40px;
+    }
+
+
+</style>
+    

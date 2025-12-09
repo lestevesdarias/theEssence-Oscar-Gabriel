@@ -1,0 +1,18 @@
+---
+
+import Article from './Article.astro';
+
+const articles = Astro.props.articles;
+---
+<section class="article-group">
+  {articles.map((article: { title: unknown; image: unknown; description: unknown; author: unknown; date:unknown }) => (
+    <Article
+      title={article.title}
+      image={article.image}
+      description={article.description}
+      author={article.author}
+      date={article.date}
+    />
+  ))}
+</section>
+<style></style>

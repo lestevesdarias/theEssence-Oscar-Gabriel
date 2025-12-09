@@ -1,0 +1,42 @@
+---
+
+const { titulo, imagen, texto } = Astro.props;
+---
+<article class="articulo">
+  <div class="contenido_articulo">
+    <img src={imagen} alt={titulo} class="imagen_articulo" />
+    <div class="texto_articulo">
+      <h1>{titulo}</h1>
+      <p>{texto}</p>
+    </div>
+  </div>
+</article>
+
+
+<style>
+    .articulo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.contenido_articulo {
+  display: flex;
+  align-items: flex-start;
+}
+
+.imagen_articulo {
+  width: 40%;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.texto_articulo {
+  width: 55%;
+}
+
+
+
+</style>

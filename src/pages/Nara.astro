@@ -1,0 +1,273 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+
+<LayoutNoBarra>
+    <Techo/>
+
+<div class="fotos">
+    <swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../nar1.jpg" alt="Imagen 1 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../nar2.jpg" alt="Imagen 2 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../nar3.jpg" alt="Imagen 3 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../nar4.jpg" alt="Imagen 4 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../nar5.jpg" alt="Imagen 5 del carrusel">
+        </div>
+    </swiper-slide>
+    
+  </swiper-container>
+</div>
+<div class="contenedor-articulo">
+    
+    <div class="seccion-principal">
+
+        <h1 class="titulo-principal-seccion">Nara: La Antigua Capital de Japón:</h1>
+
+        <p>Durante varios siglos, Nara fue el epicentro de poder y cultura de Japón, y capital del país, cumpliendo un rol fundamental en la conformación de la identidad y tradiciones japonesas que perduran hasta el día de hoy. Su historia se remonta al período Nara (710-794 d. C.).</p>
+
+        <p>El período Nara, con ella la introducción de la religión budista, supuso un hito en la historia de Japón, transformando su panorama espiritual, político y cultural. La influencia budista se materializó en imponentes templos, como el Todai-ji, que albergaba el Gran Buda. A lo largo de la ciudad se establecieron numerosos monasterios, que no solo eran centros de culto, sino también de saber y arte. Nara fue el centro de la Ruta de la Seda de Japón, lo que permitió el intercambio de bienes, ideas y tecnologías. Los templos de Nara son considerados un tesoro vivo, con muchos períodos históricos, desde sus inicios hasta el día de hoy, conservando tradiciones. Declarados Patrimonio de la Humanidad por la UNESCO, estos templos constituyen una visita obligada si se quiere experimentar la historia de Japón. Su legado cultural es innegable, lo que la convierte en una de las joyas de Japón.</p>
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        <h2 class="titulo-seccion-secundaria">Templo Todai-ji</h2>
+        
+        <div class="bloque-contenido-imagen">
+            <div class="bloque-texto">
+                
+                <p>El Templo Todai-ji, con sus vastos dominios y la imponente figura del Daibutsu (Gran Buda) en su interior, es uno de los emblemas de Nara y de todo Japón. Construido en el siglo VIII por orden del Emperador Shōmu, su propósito era ser el templo principal de una red de templos provinciales budistas, sirviendo como baluarte espiritual de la nación y reflejo del poder imperial. El Gran Buda, de bronce, es una de las mayores estatuas de Buda del mundo y su mera presencia irradia una serenidad que invita a la contemplación. </p>
+                
+                <p>El recinto del Todai-ji abarca varios pabellones, puertas monumentales y pagodas. La Nandaimon (Puerta Grande del Sur), con sus impresionantes estatuas de los guardianes Niō, es un testimonio de la grandiosidad arquitectónica de la época. A lo largo de los siglos, el templo ha sufrido incendios y reconstrucciones, pero ha conservado su esencia y su importancia histórica. Hoy, el Todai-ji sigue siendo un lugar de peregrinación y un recordatorio tangible de la rica herencia budista de Japón.</p>
+           
+            </div>
+            
+            <div class="bloque-imagen">
+                <img src="../nara1.jpg" alt="" /> 
+            </div>
+        </div>
+        
+        <p class="pie-seccion">El Templo Todai-ji se erigió sobre sólidas bases de espiritualidad y poder, desempeñando un papel crucial en la historia política y religiosa de Japón. Es un símbolo de la unidad entre el estado y la fe budista. Reconocimiento de su valor cultural e histórico como emblema de la época de oro del budismo y arquitectura japonesa.</p>
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        
+        <h2 class="titulo-seccion-secundaria">Los Ciervos Sagrados de Nara</h2>
+       
+        <p>Los ciervos de Nara no son solo una atracción turística, sino también un elemento fundamental del paisaje cultural y espiritual de la ciudad. Considerados "mensajeros de los dioses" y por ende tesoros naturales, viven en libertad en el Parque de Nara, donde interactúan pacíficamente con los visitantes. Esta convivencia es un símbolo de la armonía entre la naturaleza y la cultura japonesa, representando una tradición que se ha mantenido viva por siglos.</p>
+        
+        <div class="bloque-imagen-full">
+            <img src="../nara2.jpg" alt="" /> 
+        </div>
+    </div>
+
+    <div class="contenedor-caja-roja">
+        <div class="caja-info-roja">
+            
+            <h2 class="titulo-caja-roja">¿CÓMO LLEGAR?</h2>
+            
+            <p>Nara se encuentra a unos 45 minutos en tren rápido de la estación de Kioto. También hay autobuses directos desde Osaka.</p>
+        
+        </div>
+    </div>
+    
+    <div class="contenedor-pie-articulo">
+        
+        <p>Nara, cuna ancestral de Japón, es un santuario donde los templos milenarios y los ciervos sagrados coexisten, invitándonos a vivir la serenidad de una tradición que teje la historia, la fe y la inmutable belleza de la naturaleza.</p>
+    
+    </div>
+
+</div>
+<PieArticulo />
+</LayoutNoBarra>
+
+
+<style>
+
+#fotos{
+    padding-top: 50%;
+    grid-column: 1/8;
+}
+
+swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+swiper-slide {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mySwiper swiper-slide-active {
+    opacity: 1;
+}
+
+
+.portada {
+    grid-column: 1/13;
+    grid-row: 1/13;
+}
+
+
+.contenedor-articulo {
+    font-family: Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.titulo-principal-seccion {
+    font-size: 40px;
+    color: #cc0000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.titulo-seccion-secundaria {
+    font-size: 30px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+
+.seccion-principal p, .bloque-texto p, .pie-seccion, .seccion-bloque-articulo p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+
+.bloque-contenido-imagen {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bloque-texto {
+    flex: 1;
+}
+
+.bloque-imagen {
+    flex-basis: 350px;
+    flex-shrink: 0;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pie-seccion {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c41616;
+}
+
+
+
+.bloque-imagen-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+.contenedor-caja-roja {
+    
+    margin-right: -111px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    border-style: dotted;
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+}
+
+.caja-info-roja {
+    color: white;
+}
+
+.titulo-caja-roja {
+    font-size: 35px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.caja-info-roja p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.contenedor-pie-articulo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contenedor-pie-articulo p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #000000;
+}
+
+</style>

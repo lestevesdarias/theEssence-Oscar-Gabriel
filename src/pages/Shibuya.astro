@@ -1,0 +1,295 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+
+<LayoutNoBarra>
+    <Techo/>
+
+<div class="fotos">
+    <swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../shi1.jpg" alt="Imagen 1 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../shi2.jpg" alt="Imagen 2 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../shi3.jpg" alt="Imagen 3 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../shi4.jpg" alt="Imagen 4 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../shi5.jpg" alt="Imagen 5 del carrusel">
+        </div>
+    </swiper-slide>
+    
+  </swiper-container>
+</div>
+<div class="contenedor-articulo">
+    
+    <div class="seccion-principal">
+
+        <h1 class="titulo-principal-seccion">
+            Shibuya: El Pulso Descontrolado de Tokio
+        </h1>
+
+        <p>
+            Shibuya es un barrio especial de la Metrópolis de Tokio, en Japón. Está ubicada en la línea circular de tren Yamanote en el oeste de la Metrópolis de Tokio, un poco al sur de Shinjuku.
+        </p>
+
+        <p>
+            Shibuya fue fundada el 15 de marzo de 1947. Según datos de 2008, el barrio especial tenía una población de 208,371 habitantes y una densidad de 13,540 personas por km². El área total es de 15.11 km². Principalmente comercial y de entretenimiento, Shibuya ha conseguido una gran popularidad entre los jóvenes en los últimos 49 años.
+        </p>
+
+       
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        <h2 class="titulo-seccion-secundaria">
+            Shibuya Crossing
+        </h2>
+        
+        <div class="bloque-contenido-imagen">
+            <div class="bloque-texto">
+                
+                <p>
+                    En Shibuya se encuentran varios centros comerciales de moda; el más famoso de ellos es el llamado "Shibuya 109". Este centro comercial es muy popular entre los jóvenes, especialmente los adolescentes, y es famoso por ser el origen de la subcultura kogal. El panorama de la moda se extiende al norte hacia Harajuku, y Shibuya cada vez más marca los patrones de la moda para toda Asia.
+                </p>
+                
+                <p>
+                    También es conocida por el cruce que hay delante de la estación homónima, del que se dice que es el más abarrotado del mundo . Al norte de la estación de Shibuya se encuentra el Dōgenzaka, que ofrece entretenimiento a un público más maduro, con muchos clubes nocturnos y love hotels. Las estaciones principales de tren en el barrio son la propia Estación de Shibuya, la Estación Yoyogi, la Estación de Harajuku y la Estación Ebisu.
+                </p>
+           
+            </div>
+            
+            <div class="bloque-imagen">
+                <img src="../shibuya1.jpg" alt="" /> 
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        
+        <h2 class="titulo-seccion-secundaria">
+            Curiosidad
+        </h2>
+       
+        <p>
+            La palabra Shibuya significa Valle Astringente (compuesto por Shibui que significa "Astringente" y Tani que significa "Valle", formando originalmente Shibuitani o Shibuyatani). El nombre se complementa con el sufijo Ku (区, que significa "distrito" o "barrio especial") de tal manera que el nombre completo quedaría como "Shibuyataniku" (barrio del Valle Astringente), el cual ha sido simplificado a simplemente "Shibuya" o "barrio de Shibuya".
+        </p>
+
+        
+        <div class="bloque-imagen-full">
+            <img src="../shibuya2.jpg" alt="" /> 
+        </div>
+    </div>
+
+    <div class="contenedor-caja-roja">
+        <div class="caja-info-roja">
+            
+            <h2 class="titulo-caja-roja">¿CÓMO LLEGAR?</h2>
+            
+            <p>
+                Para llegar hasta Shibuya, te aconsejamos tomar el tren o el metro. No tiene pérdida porque Shibuya cuenta con importantes estaciones, como la Estación de Shibuya, la Estación de Harajuku o la Estación de Yoyogi, todas ellas cercanas a puntos clave del barrio.
+            </p>
+        
+        </div>
+    </div>
+    
+    <div class="contenedor-pie-articulo">
+        
+        <p>
+            Shibuya no es solo un destino, es una declaración de la modernidad: el cruce del mundo donde la moda y la velocidad del futuro se encuentran, dejando una impresión vibrante e inolvidable en el corazón de Tokio.
+        </p>
+    
+    </div>
+
+</div>
+<PieArticulo />
+</LayoutNoBarra>
+
+
+<style>
+
+#fotos{
+    padding-top: 50%;
+    grid-column: 1/8;
+}
+
+swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+swiper-slide {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mySwiper swiper-slide-active {
+    opacity: 1;
+}
+
+
+.portada {
+    grid-column: 1/13;
+    grid-row: 1/13;
+}
+
+
+.contenedor-articulo {
+    font-family: Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.titulo-principal-seccion {
+    font-size: 40px;
+    color: #cc0000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.titulo-seccion-secundaria {
+    font-size: 30px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+
+.seccion-principal p, .bloque-texto p, .pie-seccion, .seccion-bloque-articulo p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+
+.bloque-contenido-imagen {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bloque-texto {
+    flex: 1;
+}
+
+.bloque-imagen {
+    flex-basis: 350px;
+    flex-shrink: 0;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pie-seccion {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c41616;
+}
+
+
+
+.bloque-imagen-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+.contenedor-caja-roja {
+    
+    margin-right: -111px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    border-style: dotted;
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+}
+
+.caja-info-roja {
+    color: white;
+}
+
+.titulo-caja-roja {
+    font-size: 35px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.caja-info-roja p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.contenedor-pie-articulo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contenedor-pie-articulo p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #000000;
+}
+
+</style>

@@ -1,0 +1,32 @@
+---
+import RoomCard from "./RoomCard.astro";
+
+RoomCard
+
+
+RoomCard
+
+const rooms = Astro.props.rooms;
+---
+<section class="room-gallery">
+  {rooms.map((room: { titulo: unknown; imagen: unknown; precio: unknown; calificación: unknown; cama: unknown; baño: unknown; tamaño: unknown; tipo: unknown; }) => (
+    <RoomCard
+      titulo={room.titulo}
+      imagen={room.imagen}
+      precio={room.precio}
+      calificación={room.calificación}
+      cama={room.cama}
+      baño={room.baño}
+      tamaño={room.tamaño}
+      tipo={room.tipo}
+    />
+  ))}
+</section>
+<style> 
+ .room-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+    
+  gap: 35px;
+  padding: 20px;
+}</style>

@@ -1,0 +1,295 @@
+---
+import LayoutNoBarra from "../layouts/LayoutNoBarra.astro"
+import Techo from "../components/Techo.astro"
+import PieArticulo from "../components/PieArticulo.astro"
+---
+
+<LayoutNoBarra>
+    <Techo/>
+
+<div class="fotos">
+    <swiper-container class="mySwiper" loop="true"
+autoplay='{"delay": 3000, "disableOnInteraction": true}' effect="fade" 
+crossfade="true">
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../kana1.jpg" alt="Imagen 1 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../kana2.jpg" alt="Imagen 2 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../kana3.jpg" alt="Imagen 3 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../kana4.jpg" alt="Imagen 4 del carrusel">
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        
+        <div class="portada">
+            <img src="../kana5.jpg" alt="Imagen 5 del carrusel">
+        </div>
+    </swiper-slide>
+    
+  </swiper-container>
+</div>
+<div class="contenedor-articulo">
+    
+    <div class="seccion-principal">
+
+        <h1 class="titulo-principal-seccion">
+            Kanazawa: La Joya Cultural del Mar de Japón
+        </h1>
+
+        <p>
+            Kanazawa es conocida como la "Ciudad de la Lluvia" porque recibe más días de precipitaciones al año que casi cualquier otra ciudad de Japón. Sin embargo, este factor ha contribuido a su belleza, ya que el agua es un elemento clave en sus jardines y canales, creando una atmósfera serena y melancólica que inspira a artistas y poetas.
+        </p>
+
+       
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        <h2 class="titulo-seccion-secundaria">
+            El Jardín Kenrokuen: Un Paraiso en la Tierra
+        </h2>
+        
+        <div class="bloque-contenido-imagen">
+            <div class="bloque-texto">
+                
+                <p>
+                    Lo que hace única a Kanazawa es su capacidad para mantener viva su herencia cultural. A diferencia de otras ciudades japonesas que sufrieron grandes destrucciones durante la Segunda Guerra Mundial, Kanazawa permaneció intacta, lo que le permitió conservar sus distritos históricos, sus templos antiguos y sus tradiciones artesanales. Aquí, los visitantes pueden pasear por calles empedradas que parecen sacadas de un cuento, admirar jardines que son obras maestras del paisajismo japonés, y sumergirse en la vida de las geishas y los samuráis que alguna vez dominaron la ciudad.
+                </p>
+                
+                <p>
+                    El Jardín Kenrokuen es uno de los tres jardines más bellos de Japón y el corazón de Kanazawa. Diseñado en el siglo XVII, este jardín paisajístico combina seis atributos esenciales: espacio, tranquilidad, artificio, antigüedad, agua y vistas panorámicas. Los visitantes pueden pasear entre estanques, puentes curvos y casas de té mientras admiran los karasaki-matsu, pinos centenarios con formas escultóricas. En invierno, los árboles se protegen con yukizuri, cuerdas que evitan que la nieve dañe sus ramas.
+                </p>
+
+           
+            </div>
+            
+            <div class="bloque-imagen">
+                <img src="../kanazawa1.jpg" alt="" /> 
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="seccion-bloque-articulo">
+        
+        <h2 class="titulo-seccion-secundaria">
+            Arte y Cultura Contemporánea
+        </h2>
+       
+        <p>
+            Kanazawa no solo vive en el pasado, sino que también es un centro de arte moderno. El Museo de Arte Contemporáneo del Siglo XXI es una parada obligada, con su arquitectura circular y exposiciones interactivas.
+        </p>
+
+        <p>
+            Además, la ciudad es famosa por sus artesanías tradicionales, como la hoja de oro de Kanazawa, que se utiliza para decorar desde joyas hasta postres. No te pierdas la oportunidad de probar un helado cubierto de oro en una de las tiendas locales. Los amantes del arte que visiten Kanazawa podrán apreciar sus docenas de formas de arte tradicional.
+        </p>
+        
+        <div class="bloque-imagen-full">
+            <img src="../kanazawa2.jpg" alt="" /> 
+        </div>
+    </div>
+
+    <div class="contenedor-caja-roja">
+        <div class="caja-info-roja">
+            
+            <h2 class="titulo-caja-roja">¿CÓMO LLEGAR?</h2>
+            
+            <p>
+                Desde Tokio, toma el Shinkansen Hokuriku (aproximadamente 2.5 horas). Desde Kioto u Osaka, toma el Limited Express Thunderbird hasta Kanazawa. Una vez en la ciudad, el transporte local incluye autobuses y tranvías que conectan los principales atractivos, como el Jardín Kenrokuen.
+            </p>
+        
+        </div>
+    </div>
+    
+    <div class="contenedor-pie-articulo">
+        
+        <p>
+            Kanazawa es un tesoro del Japón que no fue arrasado; un refugio de belleza artesanal, jardines perfectos y calles de samuráis, donde la persistente lluvia solo sirve para intensificar la profunda y serena melancolía de la tradición.
+        </p>
+    
+    </div>
+
+</div>
+<PieArticulo />
+</LayoutNoBarra>
+
+
+<style>
+
+#fotos{
+    padding-top: 50%;
+    grid-column: 1/8;
+}
+
+swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+swiper-slide {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mySwiper swiper-slide-active {
+    opacity: 1;
+}
+
+
+.portada {
+    grid-column: 1/13;
+    grid-row: 1/13;
+}
+
+
+.contenedor-articulo {
+    font-family: Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.titulo-principal-seccion {
+    font-size: 40px;
+    color: #cc0000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.titulo-seccion-secundaria {
+    font-size: 30px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+
+.seccion-principal p, .bloque-texto p, .pie-seccion, .seccion-bloque-articulo p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+
+.bloque-contenido-imagen {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bloque-texto {
+    flex: 1;
+}
+
+.bloque-imagen {
+    flex-basis: 350px;
+    flex-shrink: 0;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pie-seccion {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c41616;
+}
+
+
+
+.bloque-imagen-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+.contenedor-caja-roja {
+    
+    margin-right: -111px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    border-style: dotted;
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+}
+
+.caja-info-roja {
+    color: white;
+}
+
+.titulo-caja-roja {
+    font-size: 35px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.caja-info-roja p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.contenedor-pie-articulo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.contenedor-pie-articulo p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #000000;
+}
+
+</style>
